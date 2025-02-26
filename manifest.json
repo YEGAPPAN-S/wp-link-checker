@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Gutenberg Duplicate Link Checker",
+  "version": "1.0",
+  "description": "Automatically detects duplicate links inside the WordPress Gutenberg editor.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["*://*/wp-admin/post.php*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*/wp-admin/post.php*"],
+      "js": ["popup.js"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+}
